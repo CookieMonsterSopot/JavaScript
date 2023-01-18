@@ -1,0 +1,2514 @@
+======
+STRING
+======
+
+ex1
+
+let x = "My ";
+let y = "little ";
+let z = "adventure";
+console.log(x + y + z);
+------------------------
+ex2
+
+let myText =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in venenatis odio, id fringilla eros. Sed dapibus venenatis pharetra";
+let length = myText.length;
+console.log(length);
+------------------------
+ex3
+
+let myText =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in venenatis odio, id fringilla eros. Sed dapibus venenatis pharetra";
+let result = myText.substr(4, 5);
+console.log(result);
+------------------------
+ex4
+
+let myText =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in venenatis odio, id fringilla eros. Sed dapibus venenatis pharetra";
+let result = myText.substr(-6, 6);
+console.log(result);
+-------------------------
+ex4 (reversedLastSix)
+
+let myText =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in venenatis odio, id fringilla eros. Sed dapibus venenatis pharetra";
+let reverseTextLastSix = myText.split("").reverse().join("").substr(0, 6);
+console.log(myText);
+console.log(reverseTextLastSix);
+-------------------------
+ex5
+
+let myText =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in venenatis odio, id fringilla eros. Sed dapibus venenatis pharetra";
+let showLastFive = myText.substr(125, 5);
+console.log(showLastFive);
+-------------------------
+
+ex6
+
+let myText =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in venenatis odio, id fringilla eros. Sed dapibus venenatis pharetra";
+let sum = myText[4] + myText[14] + myText[19] + myText[24];
+console.log(myText);
+console.log(sum);
+-------------------------
+ex7
+
+let myText =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in venenatis odio, id fringilla eros. Sed dapibus venenatis pharetra";
+let lowerCase = myText.toLowerCase();
+let capitalics = myText.toUpperCase();
+console.log(lowerCase);
+console.log(capitalics);
+-------------------------
+ex8
+
+let myText =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in venenatis odio, id fringilla eros. Sed dapibus venenatis pharetra";
+let replaceToX = myText.replace(/[A-Z]/g, "X");
+console.log(replaceToX);
+-------------------------
+ex9
+
+let myText =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in venenatis odio, id fringilla eros. Sed dapibus venenatis pharetra";
+let x = myText.includes("ae");
+let y = /ae/.test(myText);
+
+console.log(y);
+console.log(x);
+-------------------------
+ex10
+
+let myText =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in venenatis odio, id fringilla eros. Sed dapibus venenatis pharetra";
+let display = myText.substr(94, 4);
+console.log(display);
+
+lub
+
+let myText =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in venenatis odio, id fringilla eros. Sed dapibus venenatis pharetra";
+let display = myText.slice(94, 98);
+console.log(display);
+-------------------------
+ex11
+
+let x = prompt("podaj slowo");
+let replaceInput = x.toUpperCase();
+console.log(replaceInput);
+-------------------------
+ex12
+
+let x = prompt("podaj slowo");
+let lettersNumber = x.length;
+let word = "Litera ";
+let result = word.repeat(lettersNumber);
+console.log(result);
+
+lub
+
+let x = prompt("podaj slowo");
+console.log("litera ".repeat(x.length));
+-------------------------
+ex13
+
+let x = prompt("write text");
+let reverseText = x.split("").reverse().join("");
+console.log(reverseText);
+
+lub
+
+let text = "To jest moj super extrta tekst";
+
+for (let i = text.length - 1; i >= 0; i--) {
+  console.log(text[i]);
+}
+-------------------------
+ex14
+
+let x = prompt("write text");
+let afterA = x.substring(x.indexOf("a") + 1);
+console.log(afterA);
+-------------------------
+ex15
+
+let x = prompt("write text");
+let showString = x.slice(1, -1);
+let y = "Your text withiut first and last letter: ";
+console.log(y + showString);
+-------------------------
+ex16
+
+let x = prompt("write text");
+let countVowels = /[aAeEiIoOuUóÓąĄęĘyY]/g;
+let y = "Vowels serched : ";
+console.log(x);
+console.log(y + x.match(countVowels).length);
+
+lub po tablicach
+
+let text = "To jest moj super extrta tekst";
+let ileSamoglosek = 0;
+
+for (let i = 0; i < text.length; i++) {
+  if (
+    text[i] === "a" ||
+    text[i] === "o" ||
+    text[i] === "e" ||
+    text[i] === "u" ||
+    text[i] === "i" ||
+    text[i] === "y"
+  ) {
+    ileSamoglosek++;
+  }
+}
+
+console.log(ileSamoglosek);
+
+-------------------------
+ex17
+
+let x = prompt("write text");
+let replaceToX = x.replace(/[aeo]/g, "x");
+console.log(replaceToX);
+-------------------------
+ex18
+
+let a = prompt("write text 1");
+let b = prompt("write text 2");
+let c = prompt("write text 3");
+let d = prompt("write text 4");
+let e = prompt("write text 5");
+let lineText = a + b + c + d + e;
+console.log(lineText);
+-------------------------
+ex19
+
+let a = prompt("write text 1");
+let b = a + "\n";
+let repeatA = b.repeat(10);
+console.log(repeatA);
+--------------------------
+ex20
+
+let password = "stop";
+let i = prompt("PASSWORD");
+while (i !== password) {
+  console.log(i);
+  i = prompt("PASSWORD");
+}
+console.log("GOOD");
+
+dobrze:
+
+let history = "";
+
+while (true) {
+  let word = prompt("Enter word");
+
+  if (word === "stop") {
+    break;
+  }
+
+  history = history + " " + word;
+  console.log(history);
+}
+
+--------------------------
+ex21
+
+let i = prompt("Write text");
+let x = i.toLowerCase();
+console.log(i);
+if (x.split(" ").includes("java")) {
+  console.log("JAVA finded in text");
+  if (x.startsWith("java")) {
+    console.log("Text starts with JAVA");
+  }
+  if (x.endsWith("java")) {
+    console.log("Text ends with JAVA");
+  }
+  if (x === "java") {
+    console.log("Text is JAVA");
+  }
+  console.log("last index is: ", x.lastIndexOf("java"));
+} else {
+  console.log("There is no JAVA in text");
+}
+---------------------------
+ex22
+
+let i = prompt("Write text");
+let searchWhat = /,/gi;
+let toMakarena = i.replace(searchWhat, "-MAKARENA");
+console.log(toMakarena);
+---------------------------
+ex23
+
+let text = "Ala lubi koty ale nie jest przez Koty lubiana.";
+
+text = text.toLocaleLowerCase().split(" ");
+const letters = [];
+
+for (let i = 0; i < text.length; i++) {
+  const letter = letters.find((el) => {
+    return el.literka === text[i];
+  });
+
+  if (letter !== undefined) {
+    letter.ile++;
+  } else {
+    letters.push({
+      literka: text[i],
+      ile: 1
+    });
+  }
+}
+
+letters.forEach((el) => {
+  console.log(`${el.literka}: ${el.ile}`);
+});
+
+----------------------------------------------
+
+=========
+IF / ELSE
+=========
+
+ex1
+
+let x = parseInt(prompt("Height [cm]"));
+let y = parseInt(prompt("Weight [kg]"));
+
+if (x > 150 && y < 180) {
+   alert("Zapnij pasy!");
+} else {
+   alert("Nie będziesz jechał!");
+ }
+------------------------------------------------
+ex2
+
+let income = parseFloat(prompt("Podaj swoj przychod"));
+
+if(income < 85528.0){
+  let tax = income * 0.18;
+  if(tax >= 556.02) {
+    console.log(tax - 556.02);
+  }
+  else {
+    console.log(0);
+  }
+}
+else {
+  let tax = 14835.02 + (0.32 * (income - 85528.0));
+  console.log(tax);
+}
+
+lub
+
+let income = parseFloat(prompt("Podaj swoj przychod"));
+const incomeTreshold = 85528.0;
+
+if (income < incomeTreshold) {
+  let tax = income * 0.18;
+
+  if (tax >= 556.02) {
+    console.log(tax - 556.02);
+  } else {
+    console.log(0);
+  }
+} else {
+  let tax = 14835.02 + 0.32 * (income - incomeTreshold);
+  console.log(tax);
+}
+
+
+lub
+
+
+let income = parseFloat(prompt("Podaj swoj przychod"));
+const incomeThreshold = 85528.0;
+let tax = 0;
+
+if (income < incomeThreshold) {
+  tax = income * 0.18;
+
+  if (tax >= 556.02) {
+    tax = tax - 556.02;
+  } else {
+    tax = 0;
+  }
+} else {
+  tax = 14835.02 + 0.32 * (income - incomeThreshold);
+}
+
+console.log(tax);
+-------------------------------------
+ex 3
+
+Napisz program, który na podstawie zmiennych: kwota - amount (double) oraz ilośc
+rat - numberOfInstallments (int), obliczał będzie miesięczną kwote raty pożyczki i
+wypisywał ją w konsoli. Parametry posiadają ograniczenia:
+● kwota pożyczki musi mieścić się w przedziale od 100,00zł do 10.000,00zł,
+● liczba rat musi mieścić się w przedziale od 6 do 48.
+W przypadku wykroczenia kwoty pożyczki poza akceptowalny przedział, kwota
+pożyczki powinna być ustawiona na 5.000,00zł. W przypadku wykroczenia ilości rat
+poza akceptowalny przedział, ilośc rat powinna być ustawiona na 36.
+Obliczona miesięczna rata powinna zawierać również odsetki. Dla uproszczenia
+obliczeń, przyjmij, że do kwoty pożyczki doliczasz X procent w zależności od ilości
+rat:
+● 6-12 rat - 2,5%,
+● 13-24 rat - 5,0%,
+● 25-48 rat - 10,0%,
+a następnie obliczasz kwotę raty na podstawie ilości rat.
+
+let amount = parseFloat(prompt("Podaj kwote!"));
+let numberOfInstallments = parseInt(prompt("Podaj raty!"));
+
+if (amount < 100 || amount > 10000) {
+  amount = 5000;
+}
+
+if (numberOfInstallments < 6 || numberOfInstallments > 48) {
+  numberOfInstallments = 36;
+}
+
+if (numberOfInstallments <= 12) {
+  amount = amount + amount * 0.025;
+} else if (numberOfInstallments <= 24) {
+  amount = amount + amount * 0.05;
+} else {
+  amount = amount + amount * 0.1;
+}
+
+console.log(amount / numberOfInstallments);
+
+
+-------------------------------------
+ex4
+
+
+let number1 = parseFloat(prompt("Podaj liczbe 1"));
+let number2 = parseFloat(prompt("Podaj liczbe 2"));
+let choice = prompt("Podaj dzialanie!");
+let result = 0;
+
+
+switch (choice) {
+  case "+":
+    result = number1 + number2;
+    break;
+  case "-":
+    result = number1 - number2;
+    break;
+  case "*":
+    result = number1 * number2;
+    break;
+  case "/":
+    if (number2 !== 0) {
+      result = number1 / number2;
+    } else {
+      console.log("Nie dzielimy przez 0");
+    }
+    break;
+  default:
+    console.log("Nie obslugiwane dzialanie");
+    break;
+}
+
+console.log(`${number1} ${choice} ${number2} = ${result}`);
+
+
+lub
+
+
+let number1 = parseFloat(prompt("Podaj liczbe 1"));
+let number2 = parseFloat(prompt("Podaj liczbe 2"));
+let choice = prompt("Podaj dzialanie!");
+let result = 0;
+
+if (choice === "+") {
+  result = number1 + number2;
+} else if (choice === "-") {
+  result = number1 - number2;
+} else if (choice === "*") {
+  result = number1 * number2;
+} else if (choice === "/") {
+  if (number2 !== 0) {
+    result = number1 / number2;
+  } else {
+    console.log("Nie dzielimy przez 0");
+  }
+} else {
+  console.log("Nie obslugiwane dzialanie");
+}
+
+console.log(number1 + " " + choice + " " + number2 + " = " + result);
+console.log(`${number1} ${choice} ${number2} = ${result}`);
+-----------------------------------
+ex5
+
+let random = Math.floor(Math.random() * 6 + 1);
+let isEven = random % 2 === 0;
+let textToDisplay = isEven ? "Parzysta" : "Nieparzysta";
+
+console.log(textToDisplay);
+
+if (random === 6) {
+  console.log("Wygrales!");
+}
+-------------------------------------
+ex6
+
+
+let age = parseInt(prompt("Podaj swoj wiek"));
+
+if (age < 25) {
+  console.log("Siemka ZIOM!");
+} else if (25 <= age && age < 50) {
+  console.log("Dzien dobry");
+} else {
+  console.log("Uszanowanko");
+}
+-------------------------------------
+Ex7
+
+
+-------------------------------------
+Ex8
+
+let a = parseInt(prompt("Podaj liczbe A"));
+let b = parseInt(prompt("Podej liczbe B"));
+let c = parseInt(prompt("Podaj liczbe C"));
+let sum = parseInt(
+  prompt("Wybierz figure: 1-koło, 2-prostokąt, 3-trojkat, 4-wyjście")
+);
+
+if (operation === 3) {
+  console.log("Liczba A: ", a, "Liczba B: ", b, "Liczba C: ", c);
+  console.log("Pole trojkata: ", (a + b + c) / 2);
+}
+if (operation === 2) {
+  console.log("Liczba A: ", a, "Liczba B: ", b, "Liczba C: ", c);
+  console.log("Pole prostokata: ", a * b);
+  console.log("Obwod prostokata: ", 2*(a+b);
+}
+if (operation === 1) {
+  console.log("Liczba A: ", a, "Liczba B: ", b, "Liczba C: ", c);
+  console.log("Pole koła: ", Math.PI * Math.pow(a, 2));
+  console.log("Obwod koła: ", 2 * Math.PI * a);
+} else {
+  console.log("Zapraszamy ponownie");
+}
+---------------------------------------------
+Ex9
+
+let a = [Math.floor(Math.random() * 10 + 1)];
+let b = [Math.floor(Math.random() * 10 + 1)];
+let c = [Math.floor(Math.random() * 10 + 1)];
+
+const tab = [a, b, c];
+
+for (let i = 0; i < tab.length; i++) {
+  console.log(tab[i]);
+}
+console.log("Najwieksza liczba: ", Math.max(...tab));
+-----------------------------------------------
+Ex10
+
+let a = parseInt(prompt("Podaj liczbe"));
+let b = parseInt(
+  prompt(
+    "WYbierz format: 1-sekundy, 2-minuty, 3-godziny, 4-dni, 5-tygodnie, 6-miesiace"
+  )
+);
+
+if (b === 1) {
+  console.log(a, " sekundy to ", a / 3600, " godziny");
+}
+if (b === 2) {
+  console.log(a, " minuty to ", a / 60, " godziny");
+}
+if (b === 3) {
+  console.log(a, " godziny to ", a / 1, " godziny");
+}
+if (b === 4) {
+  console.log(a, " dni to ", a * 24, " godzin");
+}
+if (b === 5) {
+  console.log(a, " tygodni to ", a * 24 * 7, " godziny");
+}
+if (b === 6) {
+  console.log(a, " miesiace to ", a * 24 * 30, " godziny");
+}
+---------------------------------------------
+Ex11
+
+let a = parseInt(prompt("Podaj bok A"));
+let b = parseInt(prompt("Podaj bok B"));
+
+console.log(
+  "Dlugość przyprostokątnej w trójkącie prostokątnym to ",
+  Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2))
+);
+
+---------------------------------------------
+Ex12
+
+let a = parseInt(prompt("Przyprostokatna A"));
+let b = parseInt(prompt("Przyprostokatna B"));
+let c = parseInt(prompt("Przeciwprostokatna C"));
+
+if (c < a + b || a < c + b || b < c + a) {
+  console.log("To jest trójkąt");
+} else {
+  console.log("To nie jest trójkąt");
+}
+
+-----------------------------------------
+
+=====
+PĘTLE
+=====
+
+Ex2
+
+for (let i = 2; i <= 100; i = i + 2) {
+  console.log(i);
+}
+-----------------------------------------
+Ex3
+
+for (let i = 100; i >= 1; i--){
+  console.log(i);
+}
+-----------------------------------------
+Ex4
+for (let i = 1; i < 100; i = i * 3) {
+  console.log(i);
+}
+
+-----------------------------------------
+Ex5
+
+
+const password = "maslo";
+
+while(true){
+let userPass = prompt("Podaj haslo");
+if(userPass === password){
+  console.log("Dobrze");
+  break;
+}
+else {
+  console.log("Zle");
+}
+}
+
+albo
+
+const password = "maslo";
+
+let i = prompt("Podaj hasło");
+
+while (i !== password) {
+  console.log("ZLE");
+  i = prompt("Podaj hasło");
+}
+
+console.log("Dobrze");
+-------------------------------------------
+Ex6
+
+let sum = 0;
+
+for (let i = 0; i <= 15; i++) {
+  sum = sum + i;
+}
+
+console.log(sum);
+--------------------------------------------
+Ex7
+
+let number = parseInt(prompt("Podaj liczbę: ", ""));
+let strong = 1;
+for (i = number; i > 1; i--) {
+  strong = strong * i;
+}
+alert("silnia dla liczby " + number + " wynosi " + strong);
+
+--------------------------------------------
+Ex8
+
+function NWD(a, b) {
+  while (b) {
+    c = a % b;
+    a = b;
+    b = c;
+  }
+  return a;
+}
+
+console.log("Program do oblicznia NWD");
+
+console.log(
+  "NWD = " + NWD(prompt("podaj pierwsza liczbe"), prompt("Podaj druga liczbe"))
+);
+----------------------------------------
+Ex9
+
+let liczba1 = parseInt(prompt("Wprowadz liczbe 1:", ""));
+let liczba2 = parseInt(prompt("Wprowadz liczbe 2:", ""));
+const tab = [];
+if (liczba1 < liczba2) {
+  for (x = liczba1; x <= liczba2; x++) {
+    tab.push(x + " ");
+  }
+
+  const mixedSum = (tab = [" "]) => {
+    let sum = 0;
+    for (let i = 0; i < tab.length; i++) {
+      const el = tab[i];
+      sum += +el;
+    }
+    return sum;
+  };
+  console.log(tab);
+  console.log(mixedSum(tab));
+}
+if (liczba1 > liczba2) {
+  for (x = liczba1; x >= liczba2; x--) {
+    tab.push(x + " ");
+  }
+
+  const mixedSum = (tab = [" "]) => {
+    let sum = 0;
+    for (let i = 0; i < tab.length; i++) {
+      const el = tab[i];
+      sum += +el;
+    }
+    return sum;
+  };
+  console.log(tab);
+  console.log(mixedSum(tab));
+}
+--------------------------------------
+Ex10
+
+let numb = parseInt(prompt("Wprowadz liczbe:", ""));
+
+let resulat = 0;
+let power = 0;
+
+while (Math.pow(2, power) < numb) {
+  resulat = Math.pow(2, power);
+  console.log(resulat);
+  power++;
+}
+
+LUB
+
+let numb = parseInt(prompt("Wprowadz liczbe:", ""));
+
+let resulat = 0;
+
+for (let i = 0; i < numb; i++) {
+  resulat = Math.pow(2, i);
+
+  if (resulat < numb) {
+    console.log(resulat);
+  } else {
+    break;
+  }
+}
+
+-------------------------------------------
+Ex11
+
+const tab = [];
+let sum = 0;
+
+while (true) {
+  let input = prompt("Podaj liczbę", "");
+  if (input === "0" || input === null) {
+    break;
+  }
+  tab.push(Number(input));
+}
+
+for (let i = 0; i < tab.length; i++) {
+  sum += tab[i];
+}
+console.log(tab.splice);
+console.log(sum);
+
+-------------------------------------------
+Ex12
+
+const tab = [];
+let sum = 0;
+
+while (true) {
+  let input = prompt("Podaj liczbę", "");
+  if (input === "0" || input === null) {
+    break;
+  }
+  tab.push(Number(input));
+}
+
+for (let i = 0; i < tab.length; i++) {
+  sum += tab[i];
+}
+console.log("Twój ciąg liczb to: ", tab);
+console.log("Suma twojego ciągu to: ", sum);
+const getMinMax = (tab) => {
+  const sortedArr = tab.sort((a, b) => a - b);
+  const min = sortedArr[0];
+  const max = sortedArr[sortedArr.length - 1];
+  return [min + max];
+};
+let resultat = getMinMax(tab);
+
+const avarage = (tab) => {
+  const sortedArr = tab.sort((a, b) => a - b);
+  const min = sortedArr[0];
+  const max = sortedArr[sortedArr.length - 1];
+  return [(min + max) / 2];
+};
+let resAvarage = avarage(tab);
+console.log(
+  "Suma najwiekszej oraz najmniejszej liczby w ciągu to: ",
+  resultat[0]
+);
+
+console.log(
+  "Średnia arytmetyczna najwiekszej oraz najmniejszej liczby w ciągu to: ",
+  resAvarage[0]
+);
+
+LUB
+
+
+let sum = 0;
+let cnt = 0;
+let min = 99999999999;
+let max = -9999999999;
+
+while (true) {
+  let number = parseInt(prompt("Podaj liczbe"));
+
+  if (number === 0) {
+    console.log(sum / cnt);
+    console.log(min);
+    console.log(max);
+    break;
+  }
+
+  if (number < min) {
+    min = number;
+  }
+
+  if (number > max) {
+    max = number;
+  }
+
+  cnt++;
+  sum = sum + number;
+}
+
+------------------------------------------------------
+ex13
+
+let num = parseInt(prompt("Podaj liczbę: ", ""));
+  for (i = 1; i <= num; i++) 
+  if (num % i == 0) document.write(i + " ");
+------------------------------------------------------
+
+ex14
+
+let a = parseInt(prompt("Podaj liczbę"));
+if (a <= 1) {
+  console.log("Przerywam pracę");
+}
+for (let i = 2; i < a; i++) {
+  if (a % i === 0) {
+    console.log("Nie");
+  } else {
+    console.log("Tak");
+  }
+}
+
+LUB
+
+let num = 6;
+let pierwsza = true;
+
+    // num = parseInt(prompt("Podaj liczbę"))
+
+
+    if (num <= 1) {
+        console.log("Przerywam pracę");
+    }
+    else {
+        for (let i = 2; i < num; i++){
+            if (num % i === 0) {
+                pierwsza = false;
+                break;
+            }
+        }
+
+        if (pierwsza) {
+            console.log("Tak");
+        }
+        else {
+            console.log("Nie");
+        }
+    }
+-----------------------------
+Ex15
+
+let x = [];
+for (let i = 0; i < 6; i++) {
+  x.push(Math.floor(Math.random() * 60) + 1);
+}
+document.write(x);
+
+-----------------------------
+Ex16
+
+const pass = "kiepsko";
+let i = prompt("Jak się masz?", "");
+
+while (i !== pass) {
+  i = prompt("Jak się masz?", "");
+}
+document.write("To słabo!");
+
+----------------------------
+Ex17
+
+let yourAge = parseInt(prompt("Ile masz lat?", ""));
+for (let i = 1; i < yourAge / 10; i++) {
+  document.write("Sto lat!", "<br>");
+}
+----------------------------
+Ex18
+
+const condition = 30;
+let yourAge = parseInt(prompt("Ile masz lat?", ""));
+
+while (yourAge <= condition) {
+  yourAge = parseInt(prompt("Ile masz lat?", ""));
+}
+for (let i = 0; i < yourAge - 20; i++) {
+  document.write("KUP TEN JEBANY CZAJNIK!!!", "<br>");
+}
+
+----------------------------
+Ex20
+
+let sum = 0;
+
+while (true) {
+  let rndNumber = Math.floor(Math.random() * 9 + 2);
+
+  let choice = prompt("Czy grasz dalej?");
+
+  if (choice === "d") {
+    sum = sum + rndNumber;
+    console.log(sum);
+  }
+  if (choice === "p") {
+    console.log(sum);
+    break;
+  }
+  if (sum > 21) {
+    console.log("Przegrales");
+    break;
+  }
+  if (sum === 21) {
+    console.log("Wygrales");
+    break;
+  }
+}
+----------------------------------
+Ex21
+
+number = Math.floor(Math.random() * 100) + 1;
+let guess;
+do {
+  guess = prompt("Zgadnij liczbę: ");
+  let difference = Math.abs(number - parseInt(guess));
+
+  if (difference > 0 && difference <= 10) {
+    alert("gorąco");
+  } else if (difference > 11 && difference <= 30) {
+    alert("ciepło");
+  } else if (difference > 31 && difference <= 60) {
+    alert("zimno");
+  } else if (difference > 61 && difference <= 100) {
+    alert("lodowato");
+  }
+} while (guess != number);
+alert("Good Job!");
+end();
+----------------------------------
+
+=======
+TABLICE
+=======
+
+ex1
+
+const tab = [];
+
+for (let i = 0; i < 10; i++) {
+  let number = parseInt(prompt("Podaj liczbe"));
+  tab.push(number);
+}
+
+console.log(tab);
+--------------------------------
+ex2
+
+let allNumbers = [];
+for (let i = 0; i < 10; i++) {
+  let giveNumber = parseInt(prompt("Podaj liczbę: ", ""));
+  allNumbers.push(giveNumber);
+}
+
+alert(allNumbers.reverse());
+
+--------------------------------
+ex3
+
+let allNumbers = [];
+for (let i = 0; i < 10; i++) {
+  let giveNumber = parseInt(prompt("Podaj liczbę: ", ""));
+  allNumbers.push(giveNumber);
+}
+
+alert(Math.max.apply(Math, allNumbers));
+---------------------------------
+
+ex4
+
+const tab = [6, 4, 3, 7, 2, 1, 5, 8, 5, 3];
+let sum = 0;
+for (let i = 0; i < tab.length; i++) {
+  sum = sum + tab[i];
+}
+
+console.log(sum);
+--------------------------------
+ex5
+
+const tab = [6, 4, 3, 7, 2, 1, 5, 8, 5, 3];
+
+for (let i = 0; i < tab.length; i++) {
+  let toCheck = tab[i];
+  
+  for (let j = 0; j < tab.length; j++) {
+    if(toCheck === tab[j] && i !== j){
+
+    }
+  }
+}
+
+lepiej....
+
+const tab = [6, 4, 3, 7, 2, 1, 5, 8, 5, 3];
+
+let duplicate = false;
+
+for (let i = 0; i < tab.length; i++) {
+  let toCheck = tab[i];
+
+  for (let j = 0; j < tab.length; j++) {
+    if (toCheck === tab[j] && i !== j) {
+      duplicate = true;
+    }
+  }
+}
+
+if (duplicate) {
+  console.log("Sa duplikaty!");
+}
+----------------------------------------
+ex6
+
+let numbers = [];
+
+for (let i = 0; i < 10; i++) {
+  let giveNumber = parseInt(prompt("Podaj liczbę: ", ""));
+  numbers.push(giveNumber);
+}
+
+(sortedArr = []), (count = 1);
+
+sortedArr = numbers.sort();
+
+for (var i = 0; i < sortedArr.length; i = i + count) {
+  count = 1;
+  for (var j = i + 1; j < sortedArr.length; j++) {
+    if (sortedArr[i] === sortedArr[j]) count++;
+  }
+  document.write(sortedArr[i] + " = " + count + "<br>");
+}
+----------------------------------------
+ex7
+
+const tab = [6, 4, 3, 7, 2, 1, 5, 8, 5, 3];
+
+const even = [];
+const odd = [];
+
+for (let i = 0; i < tab.length; i++) {
+  if (tab[i] % 2 === 0) {
+    even.push(tab[i]);
+  } else {
+    odd.push(tab[i]);
+  }
+}
+
+console.log(even);
+console.log(odd);
+--------------------------------
+ex8
+
+let numbers = [];
+
+for (let i = 0; i < 10; i++) {
+  let giveNumber = parseInt(prompt("Podaj liczbę: ", ""));
+  numbers.push(giveNumber);
+}
+
+numbers.sort((a, b) => b - a);
+
+alert(numbers[1]);
+--------------------------------
+ex9
+
+let arr = [234, 43, 55, 63, 5, 6, 235, 547];
+
+for (let i = 0; i < arr.length; i++) {
+  for (let j = 0; j < arr.length - i - 1; j++) {
+    if (arr[j] > arr[j + 1]) {
+      let temp = arr[j];
+      arr[j] = arr[j + 1];
+      arr[j + 1] = temp;
+    }
+  }
+}
+alert(arr);
+--------------------------------
+
+ex10
+
+const tab = [6, 4, 3, 7, 2, 1, 5, 8, 5, 3];
+
+let number = parseInt(prompt("Podaj liczbe!"));
+
+let idx = tab.indexOf(number);
+
+if (idx === -1) {
+  console.log("Nie ma takiej liczby");
+} else {
+  console.log(idx);
+}
+-------------------------------
+Ex11
+
+let numbers = [];
+
+for (let i = 0; i < 10; i++) {
+  let giveNumber = parseInt(prompt("Podaj liczbę: ", ""));
+  numbers.push(giveNumber);
+}
+
+let dif = Math.max.apply(Math, numbers) - Math.min.apply(Math, numbers);
+let sum = Math.max.apply(Math, numbers) + Math.min.apply(Math, numbers);
+let avg = (Math.max.apply(Math, numbers) + Math.min.apply(Math, numbers)) / 2;
+
+alert(numbers);
+alert("różnica największej i najmniejszej: " + dif);
+alert("suma największej i najmniejszej: " + sum);
+alert("średnia największej i najmniejszej: " + avg);
+---------------------------------
+
+---------------------------------
+ex13
+
+const myHistory = [];
+
+while(true) {
+  let choice = prompt("Podaj wybor!");
+
+  if(choice === "1"){
+    let number1 = parseInt(prompt("Podaj liczbe 1"));
+    let number2 = parseInt(prompt("Podaj liczbe 2"));
+    console.log(number1 + number2);
+    myHistory.push(`${number1} + ${number2} = ${number1 + number2}`);
+  }
+  else if(choice === "2"){
+    let number1 = parseInt(prompt("Podaj liczbe 1"));
+    let number2 = parseInt(prompt("Podaj liczbe 2"));
+    console.log(number1 - number2);
+    myHistory.push(`${number1} - ${number2} = ${number1 - number2}`);
+  }
+  else if(choice === "3"){
+    let number1 = parseInt(prompt("Podaj liczbe 1"));
+    let number2 = parseInt(prompt("Podaj liczbe 2"));
+    console.log(number1 * number2);
+    myHistory.push(`${number1} * ${number2} = ${number1 * number2}`);
+  }
+  else if(choice === "4"){
+    let number1 = parseInt(prompt("Podaj liczbe 1"));
+    let number2 = parseInt(prompt("Podaj liczbe 2"));
+    console.log(number1 / number2);
+    myHistory.push(`${number1} / ${number2} = ${number1 / number2}`);
+  }
+  else if(choice === "5"){
+    console.log(myHistory);
+  }
+  else if(choice === "0"){
+    break;
+  }
+}
+-----------------------------------------
+ex14
+
+const uniqueNumbers = [];
+
+while (uniqueNumbers.length !== 6) {
+  let rndNumber = Math.floor(Math.random() * 11);
+
+  if (uniqueNumbers.includes(rndNumber)) {
+    console.log("Liczba istnieje");
+  } else {
+    uniqueNumbers.push(rndNumber);
+  }
+}
+
+console.log(uniqueNumbers);
+-------------------------------------------
+ex16
+
+let text = prompt("Wpisz tekst", "");
+let filtr = /[a-zA-Z0-9]/g;
+alert("ilość litetr w tekscie to: " + text.match(filtr).length);
+-------------------------------------------
+ex17
+
+const tab = [[], [], [], [], []];
+
+for (let i = 0; i < 5; i++) {
+  for (let j = 0; j < 5; j++) {
+    const number = parseInt(prompt("Podaj liczbe!"));
+    tab[i].push(number);
+  }
+}
+
+console.log(tab);
+-------------------------------------------
+
+ex18
+
+const tab = [
+  [1, 2, 3, 9, 5],
+  [2, 3, 4, 544, 2],
+  [4, 3, 2, 33, 11],
+  [8, 4, 3, 6, 0],
+  [4, 9, 22, 6, 9]
+];
+
+let min = tab[0][0];
+let sum = 0;
+
+for (let i = 0; i < tab.length; i++) {
+  for (let j = 0; j < tab[i].length; j++) {
+    if (min > tab[i][j]) {
+      min = tab[i][j];
+    }
+  }
+
+  sum = sum + tab[i][i];
+}
+
+console.log(min);
+console.log(sum);
+-------------------------------
+ex19
+
+const tab = [
+  [4, 3, 2, 4, 6],
+  [7, 3, 4, 9, 2],
+  [8, 1, 4, 8, 2],
+  [9, 3, 2, 1, 2],
+  [0, 5, 2, 1, 5]
+];
+
+for (let i = 0; i < 5; i++) {
+  let sum = 0;
+  for (let j = 0; j < 5; j++) {
+    sum = sum + tab[j][i];
+  }
+  console.log(sum);
+}
+---------------------------------
+ex21
+
+const string = prompt("Enter a string: ");
+const arrayValues = string.split("");
+const reverseArrayValues = arrayValues.reverse();
+const reverseString = reverseArrayValues.join("");
+
+if (string == reverseString) {
+  alert("It is a palindrome");
+} else {
+  alert("It is not a palindrome");
+}
+------------------------------------------
+ex22
+
+let arr = [];
+for (let i = 0; i < 10; i++) {
+  let giveNumber = parseInt(prompt("Podaj liczbę: ", ""));
+  arr.push(giveNumber);
+}
+let num = parseInt(prompt("Podaj sumę: ", ""));
+
+const twoSum = (arr, num) => {
+  let obj = {};
+  let res = [];
+  arr.map((item) => {
+    let com = num - item;
+    if (obj[com]) {
+      res.push([obj[com], item]);
+    } else {
+      obj[item] = item;
+    }
+  });
+  return res;
+};
+
+alert(twoSum(arr, num));
+
+------------------------------------------
+
+ex23 
+
+const tab = [];
+
+for (let i = 0; i < 10; i++) {
+  const number = parseInt(prompt("Podaj liczbe"));
+  if (number % 5 === 0) {
+    tab.push(number);
+  }
+}
+
+if (tab.length === 0) {
+  console.log("Szkoda");
+} else {
+  tab.sort((a, b) => a - b);
+  console.log(tab);3
+}
+------------------------------------
+ex24
+
+let text = [6, 5, 4, 5, 10, 5, 8, 3, 10, 6, 6, 6, 4, 3, 2, 8, 1, 3, 4, 7];
+
+const letters = [];
+
+//text = text.toLowerCase();
+for (let i = 0; i < text.length; i++) {
+  const letter = letters.find((el) => {
+    return el.literka === text[i];
+  });
+
+  if (letter !== undefined) {
+    letter.ile++;
+  } else {
+    letters.push({
+      literka: text[i],
+      ile: 1
+    });
+  }
+}
+
+letters.forEach((el) => {
+  console.log(`${el.literka}: ${el.ile}`);
+});
+----------------------------------
+
+=======
+FUNKCJE
+=======
+
+ex1
+
+function showText() {
+  console.log("Hello world!");
+}
+showText();
+---------------------------
+ex2
+
+function add(num1, num2) {
+  return num1 + num2;
+}
+
+console.log(add(1, 76));
+---------------------------
+ex3
+
+const num = parseInt(prompt("Podaj liczbę"));
+function oddOrEven(num) {
+  if (num % 2 == 0) return "parzysta";
+  return "nieparzysta";
+}
+
+document.write(oddOrEven(num));
+console.log(oddOrEven(num));
+----------------------------
+ex4
+
+const num = parseInt(prompt("Podaj liczbę:", ""));
+const pov = parseInt(prompt("Podaj potęgę:", ""));
+function toPow() {
+  return Math.pow(num, pov);
+}
+document.write("Wynik: ", toPow());
+console.log(toPow());
+-----------------------------
+ex5
+
+function toTab() {
+  const tab = [];
+  for (let i = 0; i < 5; ++i) {
+    const num = parseInt(prompt("Podaj 5 liczb do tablicy:", ""));
+    tab.push(num);
+  }
+  return tab;
+}
+document.write(toTab());
+-------------------------------
+ex6
+
+function sumTab(tab) {
+  let sum = 0;
+
+  for (let i = 0; i < tab.length; i++) {
+    sum = sum + tab[i];
+  }
+
+  return sum;
+}
+
+console.log(sumTab([6, 5, 4]));
+
+
+strzalkowa:
+
+const sumTab = (tab) => {
+  let sum = 0;
+
+  for (let i = 0; i < tab.length; i++) {
+    sum = sum + tab[i];
+  }
+
+  return sum;
+};
+
+console.log(sumTab([6, 5, 4]));
+---------------------------
+ex7
+
+function isEven(num) {
+  return num % 2 === 0;
+}
+
+function showEvenNumbers(tab) {
+  for (let i = 0; i < tab.length; i++) {
+    if (isEven(tab[i])) {
+      console.log(tab[i]);
+    }
+  }
+}
+
+showEvenNumbers([3, 6, 4, 2, 56]);
+---------------------------
+ex8
+
+function toTab() {
+  const tab = [];
+  for (let i = 0; i < 5; ++i) {
+    const num = parseInt(prompt("Podaj 5 liczb do tablicy:", ""));
+    tab.push(num + 10);
+  }
+  return tab;
+}
+
+document.write(toTab());
+------------------------------
+ex9
+
+const num = parseInt(prompt("Podaj liczbę:", ""));
+function isPrime(num) {
+  if (num < 2) return " to nie liczba pierwsza";
+  if (num == 2) return " to liczba pierwsza";
+  for (var i = 2; i < num; i++) {
+    if (num % i === 0) return " to nie liczba pierwsza";
+  }
+  return " to liczba pierwsza";
+}
+document.write(isPrime());
+--------------------------------
+ex10
+
+let x = prompt("write text");
+function checkVovels() {
+  let countVowels = /[aeiouóąęy]/g;
+  return x.toLowerCase().match(countVowels).length;
+}
+
+function checkConsonants() {
+  let countConsonants = /[bcćdfghjklmnpqrsśtvwxyzżź]/g;
+  return x.toLowerCase().match(countConsonants).length;
+}
+document.write("Written text :", "<br/>", x);
+document.write("<br/>", "Vowels searched: ", checkVovels());
+document.write("<br/>", "Consonant searched: ", checkConsonants());
+--------------------------------------
+ex11
+
+const tab = [6, 4, 11, 12, 1, 3, 67, 5, 3, 56];
+
+function showChar(char, cnt) {
+  for (let i = 0; i < cnt; i++) {
+    console.log(char);
+  }
+}
+
+showChar("*", 3);
+showChar("%", 5);
+showChar("!", 10);
+---------------------------
+ex12
+
+while (true) {
+  const choice = prompt(`
+  1. Dodawanie
+  2. Odejmowanie
+  3. Dzielenie
+  4. Mnożenie
+  5. KONIEC`);
+
+  if (choice === "5") {
+    break;
+  }
+
+  const number1 = parseInt(prompt("Podaj pierwsza liczbe"));
+  const number2 = parseInt(prompt("Podaj druga liczbe"));
+
+  if (choice === "1") {
+    console.log(number1 + number2);
+  } else if (choice === "2") {
+    console.log(number1 - number2);
+  } else if (choice === "3") {
+    console.log(number1 / number2);
+  } else if (choice === "4") {
+    console.log(number1 * number2);
+  }
+}
+-------------------------------------
+ex13
+const tree = (n) => {
+  const result = [];
+  for (let i = 1; i <= n; i += 1) {
+    result[i] = "";
+    for (let j = i; j < n; j++) {
+      result[i] += " ";
+    }
+    const max = 2 * i - 1;
+    for (let j = 1; j <= max; j++) {
+      result[i] += "*";
+    }
+  }
+  return result.join("\n");
+};
+console.log(tree(5));
+---------------------------------------
+
+ex14
+
+function findMinValue(tab) {
+  let min = tab[0];
+
+  for (let i = 0; i < tab.length; i++) {
+    if (min > tab[i]) {
+      min = tab[i];
+    }
+  }
+
+  return min;
+}
+
+const findMaxValue = function (tab) {
+  let max = tab[0];
+
+  for (let i = 0; i < tab.length; i++) {
+    if (max < tab[i]) {
+      max = tab[i];
+    }
+  }
+
+  return max;
+};
+
+const getAverage = (tab) => {
+  let sum = 0;
+
+  for (let i = 0; i < tab.length; i++) {
+    sum = sum + tab[i];
+  }
+
+  return sum / tab.length;
+};
+
+onst tab = [5, 34, 2, 1, 7, 45, 4];
+
+console.log(findMinValue(tab));
+console.log(findMaxValue(tab));
+console.log(getAverage(tab));
+---------------------------
+ex15
+
+function calculateSquareArea(a) {
+  return a * a;
+}
+
+function calculateRectangleArea(a, b) {
+  return a * b;
+}
+
+function calculateCircleArea(r) {
+  return Math.PI * r * r;
+}
+
+const choice = prompt(`
+  1. Kwadrat
+  2. Prostokat
+  3. Koło`);
+
+if (choice === "1") {
+  const a = parseInt(prompt("Podaj bok kwadratu!"));
+  const area = calculateSquareArea(a);
+  console.log(area);
+} else if (choice === "2") {
+  const a = parseInt(prompt("Podaj długość prostokąta!"));
+  const b = parseInt(prompt("Podaj szerokość prostokąta!"));
+  const area = calculateRectangleArea(a, b);
+  console.log(area);
+} else if (choice === "3") {
+  const r = parseInt(prompt("Podaj promień koła!"));
+  const area = calculateCircleArea(r);
+  console.log(area);
+}
+
+----------------------------------------------------------------
+Ex16
+
+// 1. Tworzymy klase User: name, password
+// 2. Tworzymy funkcje zarejestruj, gdzie tworzymy usera
+// -- zwraca obiekt usera
+// 3. Tworzymy funkcje zaloguj gdzie sprawdzamy haslo
+// -- zwraca prawda lub falsz
+
+
+
+// 3. Tworzymy funkcje zaloguj gdzie sprawdzamy haslo
+// -- zwraca prawda lub falsz
+
+class User {
+  constructor(name, password) {
+    this.name = name;
+    this.password = password;
+  }
+}
+
+function registerUser() {
+  const name = prompt("Podaj nazwe uzytkownika!");
+  const password = prompt("Podaj haslo!");
+
+  const user = new User(name, password);
+  return user;
+}
+
+function login(users) {
+  const name = prompt("Podaj nazwe uzytkownika do zalogowania!");
+  const password = prompt("Podaj haslo do zalogowania!");
+
+  const user = users.find((el) => el.name === name && el.password === password);
+  if (user) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+const users = [
+  new User("Jan", "123"),
+  new User("Tomek", "qwe"),
+  new User("Ania", "opop")
+];
+
+if (login(users)) {
+  console.log("Gratulacje zalogowales sie");
+} else {
+  console.log("Zle dane");
+}
+
+----------------------------------------------------------------------------
+ex17
+
+const tab = [6, 4, 11, 12, 1, 3, 67, 5, 3, 56];
+
+const texts = ["kajak", "dom", "piesek", "ada", "sos", "test", "anna"];
+
+function isPalindrom(text) {
+  let reverse = "";
+
+  for (let i = text.length - 1; i >= 0; i--) {
+    reverse = reverse + text[i];
+  }
+
+  return text === reverse;
+}
+
+console.log(isPalindrom("kajak"));
+
+
+LUB
+
+
+const texts = ["kajak", "dom", "piesek", "ada", "sos", "test", "anna"];
+
+function isPalindrom(text) {
+  let reverse = "";
+
+  for (let i = text.length - 1; i >= 0; i--) {
+    reverse = reverse + text[i];
+  }
+
+  return text === reverse;
+}
+
+let cnt = 0;
+
+for (let i = 0; i < texts.length; i++) {
+  if (isPalindrom(texts[i])) {
+    console.log(texts[i]);
+    cnt++;
+  }
+}
+
+console.log(cnt);
+
+LUB
+
+const texts = ["kajak", "dom", "piesek", "ada", "sos", "test", "anna"];
+
+function isPalindrom(text) {
+  let reverse = "";
+
+  for (let i = text.length - 1; i >= 0; i--) {
+    reverse = reverse + text[i];
+  }
+
+  return text === reverse;
+}
+
+// let cnt = 0;
+
+// for (let i = 0; i < texts.length; i++) {
+//   if (isPalindrom(texts[i])) {
+//     console.log(texts[i]);
+//     cnt++;
+//   }
+// }
+
+// console.log(cnt);
+
+// const palindroms = texts.filter(isPalindrom);
+// console.log(palindroms);
+// console.log(palindroms.length);
+
+const palindroms = texts.filter((text) => {
+  let reverse = "";
+
+  for (let i = text.length - 1; i >= 0; i--) {
+    reverse = reverse + text[i];
+  }
+
+  return text === reverse;
+});
+
+console.log(palindroms);
+console.log(palindroms.length);
+
+TO UPPERCASE
+const texts = ["kajak", "dom", "piesek", "ada", "sos", "test", "anna"];
+
+const upperTexts = texts.map((el) => el.toUpperCase());
+
+console.log(upperTexts);
+-------------------------------------------------
+ex18
+
+class Drink {
+  constructor(name, price) {
+    this.name = name;
+    this.price = price;
+  }
+}
+
+const drinks = [
+  new Drink("Coca-cola", 5.0),
+  new Drink("Coca-cola", 5.0),
+  new Drink("Coca-cola", 5.0),
+  new Drink("Fanta", 4.5),
+  new Drink("Fanta", 4.5),
+  new Drink("Fanta", 4.5),
+  new Drink("Sprite", 3.5),
+  new Drink("Sprite", 3.5)
+];
+
+
+
+while (drinks.length != 0) {
+  let menu = "";
+  for (let i = 0; i < drinks.length; i++) {
+    const drink = drinks[i];
+    menu =
+      menu +
+      `${i + 1}. ${drink.name}: ${drink.price}
+    `;
+  }
+
+  // Sprawdzenie czy choice istnieje
+  const choice = parseInt(prompt(menu));
+  // Czy cash > price
+  const cash = parseInt(prompt("Zapłać hajs!"));
+  const change = cash - drinks[choice - 1].price;
+
+  drinks.splice(choice - 1, 1);
+
+  alert(`Twoja reszta to: ${change}`);
+}
+
+LEPIEJ
+
+class Drink {
+  constructor(name, price) {
+    this.name = name;
+    this.price = price;
+  }
+}
+const drinks = [
+  new Drink("Coca-cola", 5.0),
+  new Drink("Coca-cola", 5.0),
+  new Drink("Coca-cola", 5.0),
+  new Drink("Fanta", 4.5),
+  new Drink("Fanta", 4.5),
+  new Drink("Fanta", 4.5),
+  new Drink("Sprite", 3.5),
+  new Drink("Sprite", 3.5)
+];
+function getChoice(currentDrinks) {
+  let menu = "";
+  for (let i = 0; i < drinks.length; i++) {
+    const drink = currentDrinks[i];
+    menu =
+      menu +
+      `${i + 1}. ${drink.name}: ${drink.price}
+    `;
+  }
+  // Sprawdzenie czy choice istnieje
+  const choice = parseInt(prompt(menu));
+  return choice;
+}
+function payForSelectedDrink(choice, currentDrinks) {
+  // Czy cash > price
+  const cash = parseInt(prompt("Zapłać hajs!"));
+  const change = cash - currentDrinks[choice - 1].price;
+  alert(`Twoja reszta to: ${change}`);
+}
+function giveSelectedDrink(choice, currentDrinks){
+  currentDrinks.splice(choice - 1, 1);
+}
+while (drinks.length !== 0) {
+  const choice = getChoice(drinks);
+  payForSelectedDrink(choice, drinks);
+  giveSelectedDrink(choice, drinks);
+}
+
+PLUS KLASY
+
+class Drink {
+  constructor(name, price) {
+    this.name = name;
+    this.price = price;
+  }
+}
+
+class VendingMachine {
+  constructor(drinks) {
+    this.drinks = drinks;
+  }
+
+  getChoice() {
+    let menu = "";
+    for (let i = 0; i < this.drinks.length; i++) {
+      const drink = this.drinks[i];
+      menu =
+        menu +
+        `${i + 1}. ${drink.name}: ${drink.price}
+    `;
+    }
+    // Sprawdzenie czy choice istnieje
+    const choice = parseInt(prompt(menu));
+    return choice;
+  }
+
+  payForSelectedDrink(choice) {
+    // Czy cash > price
+    const cash = parseInt(prompt("Zapłać hajs!"));
+    const change = cash - this.drinks[choice - 1].price;
+    alert(`Twoja reszta to: ${change}`);
+  }
+
+  giveSelectedDrink(choice) {
+    this.drinks.splice(choice - 1, 1);
+  }
+
+  isEmpty() {
+    return this.drinks.length === 0;
+  }
+}
+
+const drinkMachine = new VendingMachine([
+  new Drink("Coca-cola", 5.0),
+  new Drink("Coca-cola", 5.0),
+  new Drink("Coca-cola", 5.0),
+  new Drink("Fanta", 4.5),
+  new Drink("Fanta", 4.5),
+  new Drink("Fanta", 4.5),
+  new Drink("Sprite", 3.5),
+  new Drink("Sprite", 3.5)
+]);
+
+while (!drinkMachine.isEmpty()) {
+  const choice = drinkMachine.getChoice();
+  drinkMachine.payForSelectedDrink(choice);
+  drinkMachine.giveSelectedDrink(choice);
+}
+
+-------------------------------------------------
+ex20
+
+function getRndNumber(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+console.log(getRndNumber(1, 9));
+--------------------------------------------
+ex21
+let yourName = prompt("Podaj swoje imię: ", "");
+function getRndNumber(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+document.write(
+  "Cześć ",
+  yourName,
+  ", twoja wylosowana liczba to: ",
+  getRndNumber(1, 9)
+);
+-------------------------------------------
+ex22
+
+// 1. Tworzymy klase ucznia - imie i ocena <- tablica
+// 2. Tworzymy klase dziennik - uczniowie
+// 3. Tworzymy obiekty
+// 4. Dodajemy dwie metody do dziennika
+  // - podaj oceny ucznia o okreslonej nazwie
+  // - podaj srednia ocen danego ucznia
+  
+  class Student {
+  constructor(name, grades) {
+    this.name = name;
+    this.grades = grades;
+  }
+}
+
+class Register {
+  constructor(students) {
+    this.students = students;
+  }
+
+  getStudentGrades(studentName) {
+    const student = this.students.find((el) => el.name === studentName);
+    return student.grades;
+  }
+
+  getStudentAvg(studentName) {
+    const student = this.students.find((el) => el.name === studentName);
+    let sum = 0;
+    student.grades.forEach((element) => {
+      sum = sum + element;
+    });
+    return sum / student.grades.length;
+  }
+}
+
+const students = [
+  new Student("Jan", [4, 3, 2, 5, 6]),
+  new Student("Andrzej", [1, 2, 3, 2, 1]),
+  new Student("Kasia", [5, 6, 5, 4, 6, 5])
+];
+
+const register = new Register(students);
+
+console.log(register.getStudentAvg("Kasia"));
+
+-----------------------------------------
+
+===============
+KLASY i OBJEKTY
+===============
+
+Ex1
+
+const employee = {
+  imie: "Jan",
+  nazwisko: "Nowak",
+  nrTelefonu: "111-111-111",
+  dataUrodzenia: "11-01-1980",
+  pensja: 5000,
+  stanowisko: "Programista",
+  dzial: "IT",
+  wizytowka: function () {
+    console.log(`${this.imie} ${this.nazwisko}
+    ${this.dzial} ${this.nrTelefonu}`);
+  }
+};
+
+employee.wizytowka();
+
+NA SZABLONIE
+
+function Person(
+  name,
+  surname,
+  nrTelefonu,
+  dataUrodzenia,
+  pensja,
+  stanowisko,
+  dzial
+) {
+  this.name = name;
+  this.surname = surname;
+  this.nrTelefonu = nrTelefonu;
+  this.dataUrodzenia = dataUrodzenia;
+  this.pensja = pensja;
+  this.stanowisko = stanowisko;
+  this.dzial = dzial;
+  this.wizytowka = function () {
+    console.log(`
+    ${this.name}
+    ${this.surname}
+    ${this.nrTelefonu}
+    ${this.dzial}
+    `);
+  };
+}
+
+const panJan = new Person(
+  "Jan",
+  "Nowak",
+  "111-111-111",
+  "01-01-1980",
+  7000,
+  "Programista",
+  "IT"
+);
+panJan.wizytowka();
+
+---------------------------
+Ex2
+
+const kwadrat = {
+  a: 10,
+  pole: function () {
+    return this.a * this.a;
+  },
+  obwod: function () {
+    return 4 * this.a;
+  }
+};
+
+const prostokat = {
+  a: 10,
+  b: 5,
+  pole: function () {
+    return this.a * this.b;
+  },
+  obwod: function () {
+    return 2 * this.a + 2 * this.b;
+  }
+};
+
+const trojkat = {
+  h: 15,
+  a: 10,
+  b: 30,
+  c: 40,
+  pole: function () {
+    return (this.a * this.h) / 2;
+  },
+  obwod: function () {
+    return this.a + this.b + this.c;
+  }
+};
+
+const okrag = {
+  r: 5,
+  pole: function () {
+    return this.r * this.r * Math.PI;
+  },
+  obwod: function () {
+    return 2 * Math.PI * this.r;
+  }
+};
+---------------------------
+Ex3
+
+const car = {
+  model: "Golf",
+  marka: "VW",
+  rokProdukcji: 2017,
+  przebieg: 50000,
+  dataZakupu: "01-01-2017",
+  cena: 75000,
+  paliwo: 30,
+  show: function () {
+    console.log(`
+    ${this.model}
+    ${this.marka}
+    ${this.rokProdukcji}
+    ${this.przebieg}
+    ${this.dataZakupu}
+    ${this.cena}
+    ${this.paliwo}
+    `);
+  },
+  range: function () {
+    return (this.paliwo * 100) / 7;
+  },
+  canRange: function (dystans) {
+    return this.range() >= dystans;
+  },
+  drive: function (dystans) {
+    if (this.canRange(dystans)) {
+      this.przebieg = this.przebieg + dystans;
+      this.paliwo = this.paliwo - 7 * (dystans / 100);
+    } else {
+      console.log("Brakuje paliwa");
+    }
+  }
+};
+car.show();
+console.log(car.range());
+console.log(car.canRange(400));
+car.drive(200);
+car.show();
+car.drive(200);
+car.drive(200);
+
+NA SZABLONIE:
+
+
+function Car(model, marka, rokProdukcji, przebieg, dataZakupu, cena, paliwo) {
+  this.model = model;
+  this.marka = marka;
+  this.rokProdukcji = rokProdukcji;
+  this.przebieg = przebieg;
+  this.dataZakupu = dataZakupu;
+  this.cena = cena;
+  this.paliwo = paliwo;
+  this.range = function () {
+    return (this.paliwo * 100) / 7;
+  };
+  this.canRange = function (dystans) {
+    return this.range() >= dystans;
+  };
+  this.drive = function (dystans) {
+    if (this.canRange(dystans)) {
+      this.przebieg = this.przebieg + dystans;
+      this.paliwo = this.paliwo - 7 * (dystans / 100);
+    } else {
+      console.log("Brakuje paliwa");
+    }
+  };
+  this.show = function () {
+    console.log(`
+    ${this.model}
+    ${this.marka}
+    ${this.rokProdukcji}
+    ${this.przebieg}
+    ${this.dataZakupu}
+    ${this.cena}
+    ${this.paliwo}
+    `);
+  };
+}
+
+const myVw = new Car("Golf", "VW", "2017", "50000", "01-01-2017", 75000, 30);
+myVw.show();
+
+const myBmw = new Car("120", "BMW", "2005", "310000", "03-03-2005", 25000, 30);
+myBmw.show();
+
+NA CLASSACH:
+
+class Car {
+  constructor(model, marka, rokProdukcji, przebieg, dataZakupu, cena, paliwo) {
+    this.model = model;
+    this.marka = marka;
+    this.rokProdukcji = rokProdukcji;
+    this.przebieg = przebieg;
+    this.dataZakupu = dataZakupu;
+    this.cena = cena;
+    this.paliwo = paliwo;
+  }
+
+  show() {
+    console.log(`
+    ${this.model}
+    ${this.marka}
+    ${this.rokProdukcji}
+    ${this.przebieg}
+    ${this.dataZakupu}
+    ${this.cena}
+    ${this.paliwo}
+    `);
+  }
+
+  range() {
+    return (this.paliwo * 100) / 7;
+  }
+
+  canRange(dystans) {
+    return this.range() >= dystans;
+  }
+
+  drive(dystans) {
+    if (this.canRange(dystans)) {
+      this.przebieg = this.przebieg + dystans;
+      this.paliwo = this.paliwo - 7 * (dystans / 100);
+    } else {
+      console.log("Brakuje paliwa");
+    }
+  }
+}
+
+const myVw = new Car("Golf", "VW", "2017", 50000, "01-01-2017", 75000, 30);
+
+myVw.show();
+
+---------------------------
+Ex5 + 6
+
+class Person {
+  constructor(name, surname, age) {
+    this.name = name;
+    this.surname = surname;
+    this.age = age;
+  }
+
+  show() {
+    console.log(`
+    ${this.name}
+    ${this.surname}
+    ${this.age}
+    `);
+  }
+}
+
+const myJan = new Person("Jan", "Nowak", 40);
+myJan.show();
+
+---------------------------
+Ex7
+
+class HistoryItem {
+  constructor(num1, num2, calc, result) {
+    this.num1 = num1;
+    this.num2 = num2;
+    this.calc = calc;
+    this.result = result;
+  }
+
+  text() {
+    return `${this.num1} ${this.calc} ${this.num2} = ${this.result}`;
+  }
+}
+
+class Calculator {
+  constructor() {
+    this.history = [];
+  }
+
+  add(a, b) {
+    this.addHistory(a, b, "+", a + b);
+    return a + b;
+  }
+
+  sub(a, b) {
+    this.addHistory(a, b, "-", a - b);
+    return a - b;
+  }
+
+  div(a, b) {
+    this.addHistory(a, b, "/", a / b);
+    return a / b;
+  }
+
+  mul(a, b) {
+    this.addHistory(a, b, "*", a * b);
+    return a * b;
+  }
+
+  addHistory(a, b, calc, result) {
+    const historyItem = new HistoryItem(a, b, calc, result);
+    this.history.push(historyItem);
+  }
+
+  showHistory() {
+    this.history.forEach((el, idx) => {
+      console.log(`${idx}: ${el.text()}`);
+    });
+  }
+
+  calcAgain(historyIndex) {
+    const historyItem = this.history[historyIndex];
+    if (historyItem.calc === "+") {
+      return this.add(historyItem.num1, historyItem.num2);
+    } else if (historyItem.calc === "-") {
+      return this.sub(historyItem.num1, historyItem.num2);
+    } else if (historyItem.calc === "*") {
+      return this.mul(historyItem.num1, historyItem.num2);
+    } else if (historyItem.calc === "/") {
+      return this.div(historyItem.num1, historyItem.num2);
+    }
+  }
+}
+
+const calc = new Calculator();
+
+calc.add(2, 5);
+calc.mul(8, 3);
+calc.sub(10, 2);
+calc.showHistory();
+console.log(calc.calcAgain(1));
+calc.showHistory();
+---------------------------
+ex12
+
+class TabOperations {
+  findMinimum(tab) {
+    let min = tab[0];
+
+    tab.forEach((el) => {
+      if (el < min) {
+        min = el;
+      }
+    });
+    return min;
+  }
+
+  findMaximum(tab) {
+    let max = tab[0];
+
+    tab.forEach((el) => {
+      if (el > max) {
+        max = el;
+      }
+    });
+    return max;
+  }
+
+  findAvg(tab) {
+    let sum = 0;
+    tab.forEach((el) => (sum = sum + el));
+    return sum / tab.length;
+  }
+
+  calcEven(tab) {
+    const evens = tab.filter((el) => el % 2 === 0);
+
+    let sum = 0;
+    evens.forEach((el) => (sum = sum + el));
+    return sum;
+  }
+
+  reset(tab) {
+    tab = [];
+  }
+}
+
+const tab = [5, 32, 7, 34, 2, 8, 4];
+const tabOperations = new TabOperations();
+
+console.log(tabOperations.findMaximum(tab));
+console.log(tabOperations.findMinimum(tab));
+console.log(tabOperations.findAvg(tab));
+console.log(tabOperations.calcEven(tab));
+
+lub STATYCZNIE - nie na obiekcie a na klasie
+
+class TabOperations {
+  static findMinimum(tab) {
+    let min = tab[0];
+
+    tab.forEach((el) => {
+      if (el < min) {
+        min = el;
+      }
+    });
+    return min;
+  }
+
+  static findMaximum(tab) {
+    let max = tab[0];
+
+    tab.forEach((el) => {
+      if (el > max) {
+        max = el;
+      }
+    });
+    return max;
+  }
+
+  static findAvg(tab) {
+    let sum = 0;
+    tab.forEach((el) => (sum = sum + el));
+    return sum / tab.length;
+  }
+
+  static calcEven(tab) {
+    const evens = tab.filter((el) => el % 2 === 0);
+
+    let sum = 0;
+    evens.forEach((el) => (sum = sum + el));
+    return sum;
+  }
+
+  static reset(tab) {
+    tab = [];
+  }
+}
+
+const tab = [5, 32, 7, 34, 2, 8, 4];
+
+console.log(TabOperations.findMaximum(tab));
+console.log(TabOperations.findMinimum(tab));
+console.log(TabOperations.findAvg(tab));
+console.log(TabOperations.calcEven(tab));
+---------------------------
+ex17
+
+SZKIELET:
+
+class Osoba {
+  constructor(){
+
+  }
+}
+
+class Ksiazka {
+  constructor(osoby){
+    this.osoby = osoby; 
+  }
+
+  findPerson(name){
+    
+  }
+}
+
+KOD:
+class Osoba {
+  constructor(name, surname, tel) {
+    this.name = name;
+    this.surname = surname;
+    this.tel = tel;
+  }
+}
+
+class Ksiazka {
+  constructor(osoby) {
+    this.osoby = osoby;
+  }
+
+  findPersons(searchText) {
+    searchText = searchText.toLowerCase();
+    return this.osoby.filter((el) => {
+      return el.surname.toLowerCase().startsWith(searchText);
+    });
+  }
+}
+
+const osoba1 = new Osoba("Jan", "Kowalski", "111-111-111");
+const osoba2 = new Osoba("Andrzej", "Nowak", "111-111-222");
+const osoba3 = new Osoba("Janusz", "Kowal", "111-333-111");
+const osoba4 = new Osoba("Halina", "Kowal", "444-111-111");
+const osoba5 = new Osoba("Piotrek", "Zawiejski", "111-666-111");
+
+const persons = [osoba1, osoba2, osoba3, osoba4, osoba5];
+
+const ksiazka = new Ksiazka(persons);
+
+console.log(ksiazka.findPersons("ko"));
+-------------------------------------------------
+ex27
+
+// 1. Tworzymy klase wydatek
+// 2. Tworzymy klase Dziennik Wydatkow
+  // - ma wlasciwosc wydatki
+  // - ma metode dodaj wydatek <- nazwa, opis, kwota, kategoria
+  // -- ta metoda tworzy wydatek i dodaje do tablicy wydatkow
+  
+  class Expense{
+  constructor(amount, date, title, description, category){
+    this.amount = amount;
+    this.date = date;
+    this.title = title;
+    this.description = description;
+    this.category = category;
+  }
+}
+
+class ExpensesLog {
+  constructor(){
+    this.expenses = [];
+  }
+
+  addExpense(title, amount, description, category){
+    const expense = new Expense(amount, new Date(), title, description, category);
+    this.expenses.push(expense);
+  }
+}
+---------------------------------------
+
