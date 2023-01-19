@@ -2,7 +2,7 @@ let birthDay = parseInt(prompt("Your birthday: ddmmyy", ""));
 if (localStorage.getItem(birthDay) === null) {
   let numRes = [];
 
-  for (let i = 0; i < 300377; i++) {
+  for (let i = 0; i < birthDay; i++) {
     let numbers = [];
 
     for (let j = 0; j < 6; j++) {
