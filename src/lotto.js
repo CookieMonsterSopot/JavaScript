@@ -1,5 +1,13 @@
 let birthDay = parseInt(prompt("Your birthday: ddmmyy", ""));
-if (localStorage.getItem(birthDay) === null) {
+let fromLocalStorage = window.localStorage.getItem(birthDay);
+let dateFromLocalStorage = JSON.parse(fromLocalStorage).date;
+let isoDate = new Date().toISOString().substring(0, 10);
+
+// ---- check localStorage current date and birthDay value ----
+if (
+  localStorage.getItem(birthDay) === null ||
+  dateFromLocalStorage !== isoDate
+) {
   let numRes = [];
 
   for (let i = 0; i < birthDay; i++) {
@@ -34,8 +42,19 @@ if (localStorage.getItem(birthDay) === null) {
   const tabFin = [];
   tabFin.push(mostFrequentNumbers);
 
-  localStorage.setItem(birthDay, ...tabFin);
-  document.write("Your luckie numbers: ", ...tabFin);
+  let toLocalStorage = {
+    numbers: tabFin,
+    date: isoDate,
+  };
+  localStorage.setItem(birthDay, JSON.stringify(toLocalStorage));
+  document.write(
+    "<p>Your luckie numbers today: <br /></p>",
+    ...toLocalStorage.numbers
+  );
 } else {
-  document.write("Your luckie numbers: ", ...localStorage.getItem(birthDay));
+  let numbersFromLocalStorage = JSON.parse(fromLocalStorage).numbers;
+  document.write(
+    "<p>Your luckie numbers today: <br /></p>",
+    ...numbersFromLocalStorage
+  );
 }
