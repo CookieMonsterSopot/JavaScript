@@ -1,5 +1,6 @@
 let birthDay = parseInt(prompt("Your birthday: ddmmyy", ""));
 let fromLocalStorage = window.localStorage.getItem(birthDay);
+let numbersFromLocalStorage = JSON.parse(fromLocalStorage).numbers;
 let dateFromLocalStorage = JSON.parse(fromLocalStorage).date;
 let isoDate = new Date().toISOString().substring(0, 10);
 
@@ -52,7 +53,6 @@ if (
     ...toLocalStorage.numbers
   );
 } else {
-  let numbersFromLocalStorage = JSON.parse(fromLocalStorage).numbers;
   document.write(
     "<p>Your luckie numbers today: <br /></p>",
     ...numbersFromLocalStorage
