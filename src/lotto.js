@@ -49,12 +49,12 @@ if (
   };
   localStorage.setItem(birthDay, JSON.stringify(toLocalStorage));
   document.write(
-    "<p>Your luckie numbers today: <br /></p>",
+    "Your luckie numbers today: <br />",
     ...toLocalStorage.numbers
   );
 } else {
   document.write(
-    "<p>Your luckie numbers today: <br /></p>",
+    "Your luckie numbers today: <br />",
     ...numbersFromLocalStorage
   );
 }
