@@ -1,13 +1,10 @@
 let birthDay = parseInt(prompt("Your birthday: ddmmyy", ""));
-let fromLocalStorage = window.localStorage.getItem(birthDay);
-let numbersFromLocalStorage = JSON.parse(fromLocalStorage).numbers;
-let dateFromLocalStorage = JSON.parse(fromLocalStorage).date;
+
 let isoDate = new Date().toISOString().substring(0, 10);
 
-// ---- check localStorage current date and birthDay value ----
 if (
   localStorage.getItem(birthDay) === null ||
-  dateFromLocalStorage !== isoDate
+  JSON.parse(localStorage.getItem(birthDay)).date !== isoDate
 ) {
   let numRes = [];
 
@@ -47,14 +44,12 @@ if (
     numbers: tabFin,
     date: isoDate,
   };
+
   localStorage.setItem(birthDay, JSON.stringify(toLocalStorage));
-  document.write(
-    "Your luckie numbers today: <br />",
-    ...toLocalStorage.numbers
-  );
+  document.write("Your luckie numbers today: <br />", toLocalStorage.numbers);
 } else {
-  document.write(
-    "Your luckie numbers today: <br />",
-    ...numbersFromLocalStorage
-  );
+  let numbersFromLocalStorage = JSON.parse(
+    localStorage.getItem(birthDay)
+  ).numbers;
+  document.write("Your luckie numbers today: <br />", numbersFromLocalStorage);
 }
