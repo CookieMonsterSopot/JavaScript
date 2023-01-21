@@ -46,10 +46,16 @@ if (
   };
 
   localStorage.setItem(birthDay, JSON.stringify(toLocalStorage));
-  document.write("Your luckie numbers today: <br />", toLocalStorage.numbers);
+  document.write(
+    "<p>Your luckie numbers today: <br /></p>",
+    toLocalStorage.numbers
+  );
 } else {
   let numbersFromLocalStorage = JSON.parse(
     localStorage.getItem(birthDay)
   ).numbers;
-  document.write("Your luckie numbers today: <br />", numbersFromLocalStorage);
+  document.write(
+    "<p>Your luckie numbers today: <br /></p>",
+    numbersFromLocalStorage
+  );
 }
